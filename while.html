@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>while문을 활용한 팩토리얼 계산</h1>
+    <script>
+        var num= Number(prompt('숫자를 입력해주세요'));
+        var i=1;
+        var res=1;
+
+        if(num>0){
+            while(i<=num){
+                res*=i;
+                i++;           
+        }
+            document.write(num+'!='+res);
+        }   else(
+            document.write('잘못입력하였습니다.')
+        )
+    </script>
+</body>
+</html>
