@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var vis= prompt('입장객은 몇 명인가요?','1');
+        var nrow= prompt('한 줄에 몇 명씩 앉습니까?','1');
+        var col;
+        var seatn=1;
+        if(vis%nrow===0){
+            col=vis/nrow;
+        }   else{
+                col=parseInt(vis/nrow)+1;
+        }  
+
+            for(j=0;j<col;j++){
+                for(i=1;i<=nrow;i++){
+                    document.write(' 좌석 '+seatn);
+                    seatn++;
+                    if(seatn>vis) break;
+                }   
+                document.write('<br>');              
+            }                      
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var vis= prompt('입장객은 몇 명인가요?','1');
+        var nrow= prompt('한 줄에 몇 명씩 앉습니까?','1');
+        var i;
+        var col;
+        var p=0;
+        var seatn=1;
+        if(vis%nrow===0){
+            col=vis/nrow;
+            for(j=0;j<col;j++){
+                for(i=1;i<=nrow;i++){
+                    document.write(' 좌석 '+seatn);
+                    seatn++;
+                }   
+                document.write('<br>');
+            }        
+        }   else{
+            col=parseInt(vis/nrow);
+            for(j=0;j<col;j++){
+                for(i=1;i<=nrow;i++){
+                    document.write(' 좌석 '+seatn);
+                    seatn++;
+                }
+                document.write('<br>');
+            }               
+                while(p<vis%nrow){
+                    document.write(' 좌석 '+seatn);
+                    p++;
+                    seatn++;
+                }
+        }
+        
+    </script>
+</body>
+</html>

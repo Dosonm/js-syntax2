@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        tr, td{
+            padding: 10 20 10 20;
+            border: 1px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var vis= prompt('입장객은 몇 명인가요?','1');
+        var nrow= prompt('한 줄에 몇 명씩 앉습니까?','1');
+        var col;
+        var seatn=1;
+        if(vis%nrow===0){
+            col=vis/nrow;
+        }   else{
+                col=parseInt(vis/nrow)+1;
+        }  
+        document.write('<table>');
+            document.write('<caption><h1>좌석배치도</h1></caption>');
+            for(j=0;j<col;j++){
+                document.write('<tr>');
+                for(i=1;i<=nrow;i++){
+                    document.write('<td> 좌석 '+seatn+'</td>');
+                    seatn++;
+                    if(seatn>vis) break;
+                }   
+                document.write('</tr>');              
+            }  
+        document.write('</table>');
+    </script>
+</body>
+</html>
